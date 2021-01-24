@@ -1,3 +1,13 @@
+/**
+ * @description       : 
+ * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @group             : 
+ * @last modified on  : 01-24-2021
+ * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+ * Modifications Log 
+ * Ver   Date         Author                               Modification
+ * 1.0   01-24-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+**/
 @isTest
 private class testUpdateAccountCA {
     @isTest static void test() {
@@ -19,9 +29,9 @@ private class testUpdateAccountCA {
         Order o1 = new Order(AccountId = acc1.Id);
         insert o1;
 
-        OrderItem oi1 = new OrderItemItem (OrderId = o1.Id, PricebookEntryId = pbe.Id, Quantity=10, UnitPrice = 150);
+        OrderItem oi1 = new OrderItem (OrderId = o1.Id, PricebookEntryId = pbe.Id, Quantity=10, UnitPrice = 150);
         insert oi1;
-        OrderItem oi2 = new OrderItemItem (OrderId = o1.Id, PricebookEntryId = pbe.Id, Quantity=20, UnitPrice = 1000);
+        OrderItem oi2 = new OrderItem (OrderId = o1.Id, PricebookEntryId = pbe.Id, Quantity=20, UnitPrice = 1000);
         insert oi2;        
     }
 }
