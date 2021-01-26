@@ -10,7 +10,9 @@
 **/
 public class AccountManager{
 
-    public static void updateAccountRevenue ( Set<Id> accountsId, Map<Id, Decimal> amounts){
+// A method that updates account's annual revenue.
+
+    public static void updateAccountARevenue ( Set<Id> accountsId, Map<Id, Decimal> amounts){
         List<Account> accountsToUpdate = [ SELECT id, AnnualRevenue FROM Account WHERE Id IN :accountsId];
         for( Account a : accountsToUpdate)
         if( a.AnnualRevenue != null){
