@@ -8,9 +8,10 @@
  * Ver   Date         Author                               Modification
  * 1.0   01-25-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
 **/
+
 public class AccountManager{
 
-// A method that updates account's annual revenue.
+// create a ethod that updates account's annual revenue.
 
     public static void updateAccountARevenue ( Set<Id> accountsId, Map<Id, Decimal> amounts){
         List<Account> accountsToUpdate = [ SELECT id, AnnualRevenue FROM Account WHERE Id IN :accountsId];
