@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 01-26-2021
+ * @last modified on  : 01-31-2021
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  * Modifications Log 
  * Ver   Date         Author                               Modification
@@ -11,10 +11,10 @@
 
 public class AccountManager{
 
-// create a ethod that updates account's annual revenue.
+// create a method that updates account's annual revenue.
 
-    public static void updateAccountARevenue ( Set<Id> accountsId, Map<Id, Decimal> amounts){
-        List<Account> accountsToUpdate = [ SELECT id, AnnualRevenue FROM Account WHERE Id IN :accountsId];
+    public static void updateAccountsAmounts ( Set<Id> accountsId, Map<Id, Decimal> amounts){
+        List<Account> accountsToUpdate = [ SELECT id, AnnualRevenue FROM Account WHERE Id IN : accountsId];
         for( Account a : accountsToUpdate)
         if( a.AnnualRevenue != null){
             a.AnnualRevenue += amounts.get(a.Id);

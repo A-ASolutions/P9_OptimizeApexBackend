@@ -2,29 +2,28 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 01-24-2021
+ * @last modified on  : 01-31-2021
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  * Modifications Log 
  * Ver   Date         Author                               Modification
  * 1.0   01-24-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
 **/
-global class UpdateAccounts implements Database.Batchable<sObject>{
+global class UpdateAccountsARevenue implements Database.Batchable<sObject>{
     
    global Database.QueryLocator start(Database.BatchableContext info){ 
-       //Requeter seulement les comptes qui ont au moins une commande avec le Status 'Ordered'
-       return Database.getQueryLocator('SELECT Id FROM Account');
+   
+       return Database.getQueryLocator([SELECT Id, AnnualRevenue FROM Account WHERE Id IN (SELECT AccountId FROM Order)]);
 
    }
     
    global void execute(Database.BatchableContext info, List<Account> scope){      
        list<Order> listOrders =  [SELECT Id, TotalAmount, AccountId FROM Order];
        
-		for(integer i=0; i < scope.size(); i++){
-			Account myAccount = scope[i];
+		for(Account myAccount :scope){
 			myAccount.AnnualRevenue = 0;
-           for(integer j=0; j < listOrders.size(); j++){
-               if(listOrders[j].AccountId == myAccount.Id){
-                   myAccount.AnnualRevenue = myAccount.AnnualRevenue + listOrders[j].TotalAmount;
+           for(Order order : listOrders){
+               if( order.AccountId == myAccount.Id){
+                   myAccount.AnnualRevenue += order.TotalAmount;
                }                   
            }
        }
