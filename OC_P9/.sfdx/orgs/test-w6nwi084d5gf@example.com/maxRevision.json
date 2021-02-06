@@ -1,5 +1,5 @@
 {
-    "serverMaxRevisionCounter": 32,
+    "serverMaxRevisionCounter": 105,
     "sourceMembers": {
         "CustomField__Order.NetAmount__c": {
             "serverRevisionCounter": 1,
@@ -20,8 +20,8 @@
             "isNameObsolete": false
         },
         "Profile__Admin": {
-            "serverRevisionCounter": 24,
-            "lastRetrievedFromServer": 24,
+            "serverRevisionCounter": 103,
+            "lastRetrievedFromServer": 103,
             "memberType": "Profile",
             "isNameObsolete": false
         },
@@ -56,8 +56,8 @@
             "isNameObsolete": false
         },
         "ApexClass__MyTeamOrdersController": {
-            "serverRevisionCounter": 26,
-            "lastRetrievedFromServer": 26,
+            "serverRevisionCounter": 52,
+            "lastRetrievedFromServer": 52,
             "memberType": "ApexClass",
             "isNameObsolete": false
         },
@@ -80,10 +80,10 @@
             "isNameObsolete": false
         },
         "ApexClass__testUpdateAccountCA": {
-            "serverRevisionCounter": 30,
-            "lastRetrievedFromServer": 30,
+            "serverRevisionCounter": 36,
+            "lastRetrievedFromServer": 36,
             "memberType": "ApexClass",
-            "isNameObsolete": false
+            "isNameObsolete": true
         },
         "ApexTrigger__OrderTrigger": {
             "serverRevisionCounter": 31,
@@ -92,10 +92,40 @@
             "isNameObsolete": false
         },
         "ApexPage__MyTeamOrders": {
-            "serverRevisionCounter": 32,
-            "lastRetrievedFromServer": 32,
+            "serverRevisionCounter": 55,
+            "lastRetrievedFromServer": 55,
             "memberType": "ApexPage",
             "isNameObsolete": false
+        },
+        "ApexClass__OrderTrigger_Test": {
+            "serverRevisionCounter": 78,
+            "lastRetrievedFromServer": 78,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "CustomField__Order.Status": {
+            "serverRevisionCounter": 57,
+            "lastRetrievedFromServer": null,
+            "memberType": "CustomField",
+            "isNameObsolete": false
+        },
+        "ApexClass__updateAccountsARevenueBatchSch_Test": {
+            "serverRevisionCounter": 104,
+            "lastRetrievedFromServer": 104,
+            "memberType": "ApexClass",
+            "isNameObsolete": false
+        },
+        "StandardValueSet__OrderStatus": {
+            "serverRevisionCounter": 60,
+            "lastRetrievedFromServer": null,
+            "memberType": "StandardValueSet",
+            "isNameObsolete": false
+        },
+        "ApexClass__updateAccountsARevenueBatch_Test": {
+            "serverRevisionCounter": 105,
+            "lastRetrievedFromServer": 105,
+            "memberType": "ApexClass",
+            "isNameObsolete": true
         }
     }
 }
